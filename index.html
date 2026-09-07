@@ -1,307 +1,119 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KR Godara Natural Products</title>
-
-<style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f6f7f1;
-  color:#222;
-}
-header{
-  background:#176b3a;
-  color:white;
-  text-align:center;
-  padding:28px 15px;
-}
-header h1{margin:0;font-size:30px}
-header p{font-size:17px;margin:10px 0 0}
-
-nav{
-  background:white;
-  padding:12px;
-  text-align:center;
-  position:sticky;
-  top:0;
-  z-index:10;
-  box-shadow:0 2px 8px #ccc;
-}
-nav a{
-  color:#176b3a;
-  text-decoration:none;
-  font-weight:bold;
-  margin:0 8px;
-}
-
-.hero{
-  text-align:center;
-  padding:35px 15px;
-  background:#e7f3e9;
-}
-.hero h2{font-size:28px;color:#176b3a}
-.hero p{font-size:17px}
-
-.products{
-  max-width:1000px;
-  margin:auto;
-  padding:25px 15px;
-}
-.products h2{
-  text-align:center;
-  color:#176b3a;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
-}
-
-.card{
-  background:white;
-  border-radius:15px;
-  padding:18px;
-  text-align:center;
-  box-shadow:0 3px 12px #d5d5d5;
-}
-.card .photo{
-  height:150px;
-  background:#eef2e9;
-  border-radius:12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:55px;
-}
-.card h3{margin:14px 0 7px}
-.price{
-  color:#176b3a;
-  font-size:21px;
-  font-weight:bold;
-}
-button{
-  width:100%;
-  border:0;
-  padding:12px;
-  margin-top:8px;
-  border-radius:8px;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-}
-.buy{
-  background:#176b3a;
-  color:white;
-}
-.whatsapp{
-  background:#25D366;
-  color:white;
-}
-
-.about,.contact{
-  max-width:900px;
-  margin:20px auto;
-  padding:25px 15px;
-}
-.box{
-  background:white;
-  padding:22px;
-  border-radius:15px;
-  box-shadow:0 3px 10px #ddd;
-}
-
-footer{
-  background:#222;
-  color:white;
-  text-align:center;
-  padding:25px 15px;
-  margin-top:30px;
-}
-
-.float{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  background:#25D366;
-  color:white;
-  padding:14px 18px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
-  box-shadow:0 3px 12px #777;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<h1>KR Godara Natural Products</h1>
-<p>🌿 प्राकृतिक उत्पाद • शुद्धता • विश्वास</p>
-</header>
-
-<nav>
-<a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<section class="hero">
-<h2>प्राकृतिक उत्पाद आपके लिए</h2>
-<p>घर पर तैयार किए गए प्राकृतिक एवं handmade products</p>
-</section>
-
-<section class="products" id="products">
-<h2>🌿 हमारे Products</h2>
-
-<div class="grid">
-
-<div class="card">
-<div class="photo">🧼</div>
-<h3>Natural Handmade Soap</h3>
-<p>प्राकृतिक handmade साबुन</p>
-<div class="price">₹99</div>
-<button class="buy" onclick="order('Natural Handmade Soap','99')">Buy Now</button>
-<button class="whatsapp" onclick="whatsapp('Natural Handmade Soap','99')">WhatsApp Order</button>
-</div>
-
-<div class="card">
-<div class="photo">🌿</div>
-<h3>Neem Natural Soap</h3>
-<p>नीम से तैयार प्राकृतिक साबुन</p>
-<div class="price">₹99</div>
-<button class="buy" onclick="order('Neem Natural Soap','99')">Buy Now</button>
-<button class="whatsapp" onclick="whatsapp('Neem Natural Soap','99')">WhatsApp Order</button>
-</div>
-
-<div class="card">
-<div class="photo">🌼</div>
-<h3>Turmeric Soap</h3>
-<p>हल्दी वाला handmade साबुन</p>
-<div class="price">₹109</div>
-<button class="buy" onclick="order('Turmeric Soap','109')">Buy Now</button>
-<button class="whatsapp" onclick="whatsapp('Turmeric Soap','109')">WhatsApp Order</button>
-</div>
-
-<div class="card">
-<div class="photo">🍯</div>
-<h3>Honey Natural Soap</h3>
-<p>हनी आधारित handmade soap</p>
-<div class="price">₹119</div>
-<button class="buy" onclick="order('Honey Natural Soap','119')">Buy Now</button>
-<button class="whatsapp" onclick="whatsapp('Honey Natural Soap','119')">WhatsApp Order</button>
-</div>
-
-<div class="card">
-<div class="photo">🌹</div>
-<h3>Rose Handmade Soap</h3>
-<p>गुलाब खुशबू वाला साबुन</p>
-<div class="price">₹109</div>
-<button class="buy" onclick="order('Rose Handmade Soap','109')">Buy Now</button>
-<button class="whatsapp" onclick="whatsapp('Rose Handmade Soap','109')">WhatsApp Order</button>
-</div>
-
-<div class="card">
-<div class="photo">🥥</div>
-<h3>Coconut Natural Soap</h3>
-<p>नारियल आधारित handmade soap</p>
-<div class="price">₹109</div>
-<button class="buy" onclick="order('Coconut Natural Soap','109')">Buy Now</button>
-<button class="whatsapp" onclick="whatsapp('Coconut Natural Soap','109')">WhatsApp Order</button>
-</div>
-
-</div>
-</section>
-
-<section class="about" id="about">
-<div class="box">
-<h2>🌿 KR Godara Natural Products</h2>
-<p>
-हमारा उद्देश्य प्राकृतिक और handmade products को
-लोगों तक सरल तरीके से पहुँचाना है।
-</p>
-</div>
-</section>
-
-<section class="contact" id="contact">
-<div class="box">
-<h2>📞 Order / Contact</h2>
-<p>WhatsApp पर सीधे अपना ऑर्डर भेजें।</p>
-
-<button class="whatsapp" onclick="whatsapp('General Enquiry','')">
-📱 WhatsApp पर संपर्क करें
-</button>
-</div>
-</section>
-
-<footer>
-<p>© 2026 KR Godara Natural Products</p>
-<p>Made with ❤️</p>
-</footer>
-
-<a class="float" href="https://wa.me/919602710704" target="_blank">
-💬 WhatsApp
-</a>
-
-<script>
-function whatsapp(product,price){
-let message="नमस्ते KR Godara Natural Products,%0A%0Aमुझे यह product चाहिए:%0A"+product;
-if(price!=""){
-message+="%0Aकीमत: ₹"+price;
-}
-message+="%0A%0Aकृपया Order की जानकारी बताएं।";
-window.open("https://wa.me/919602710704?text="+message,"_blank");
-}
-
-function order(product,price){
-whatsapp(product,price);
-}
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="hi">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ऑर्गेनिक प्रोडक्ट्स स्टोर</title>
+    <title>एडमिन कंट्रोल स्टोर (Dynamic Product Manager)</title>
     <style>
         * {
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
         }
 
         body {
-            background-color: #f4f6f8;
+            background-color: #f0f2f5;
             padding: 20px;
         }
 
         h1, h2 {
             text-align: center;
-            color: #2c3e50;
+            color: #1a252f;
             margin-bottom: 20px;
         }
 
+        /* Admin Panel Styling */
+        .admin-panel {
+            max-width: 900px;
+            background: #ffffff;
+            margin: 0 auto 30px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid #27ae60;
+        }
+
+        .admin-panel h2 {
+            color: #27ae60;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #27ae60;
+            outline: none;
+        }
+
+        .btn {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #219150;
+        }
+
+        .btn-cancel {
+            background-color: #95a5a6;
+            display: none;
+        }
+
+        .btn-cancel:hover {
+            background-color: #7f8c8d;
+        }
+
+        /* Products Grid */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto 40px auto;
         }
 
         .product-card {
-            background: #fff;
+            background: #ffffff;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
             padding: 15px;
             text-align: center;
             display: flex;
@@ -311,17 +123,17 @@ whatsapp(product,price);
 
         .product-card img {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
             border-radius: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .product-title {
             font-size: 1.2rem;
             font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
+            color: #2c3e50;
+            margin-bottom: 6px;
         }
 
         .product-desc {
@@ -332,59 +144,41 @@ whatsapp(product,price);
 
         .product-price {
             font-size: 1.1rem;
-            color: #27ae60;
+            color: #e67e22;
             font-weight: bold;
             margin-bottom: 15px;
         }
 
-        .btn {
-            background-color: #e67e22;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 2px;
-            font-size: 0.9rem;
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
         }
 
-        .btn-edit {
+        .btn-edit-card {
             background-color: #3498db;
+            padding: 6px 12px;
+            font-size: 0.85rem;
         }
 
-        .btn:hover {
-            opacity: 0.9;
+        .btn-delete-card {
+            background-color: #e74c3c;
+            padding: 6px 12px;
+            font-size: 0.85rem;
         }
 
-        /* Review and Comment Section */
+        /* Sections */
         .section-container {
-            max-width: 800px;
-            background: #fff;
+            max-width: 900px;
+            background: #ffffff;
             margin: 0 auto 30px auto;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .form-group input, .form-group textarea, .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
 
         .review-item, .comment-item {
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #eeeeee;
             padding: 10px 0;
         }
 
@@ -395,120 +189,108 @@ whatsapp(product,price);
 </head>
 <body>
 
-    <h1>हमारे शुद्ध प्रोडक्ट्स</h1>
+    <h1>ऑर्गेनिक स्टोर - मैनेजमेंट सिस्टम</h1>
 
-    <!-- Product Display Area -->
-    <div class="product-grid" id="productGrid">
-        <!-- Products will be dynamically generated by JS -->
+    <!-- ADMIN CONTROL PANEL (ADD & EDIT FORM) -->
+    <div class="admin-panel">
+        <h2 id="formTitle">🛠️ नया प्रोडक्ट जोड़ें (Add New Product)</h2>
+        <form id="productForm">
+            <input type="hidden" id="productId"> <!-- Hidden Field for Tracking Edit ID -->
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>प्रोडक्ट का नाम:</label>
+                    <input type="text" id="pName" placeholder="जैसे: गाय का देसी घी" required>
+                </div>
+                <div class="form-group">
+                    <label>कीमत/रेट (Price):</label>
+                    <input type="text" id="pPrice" placeholder="जैसे: ₹1400 / लीटर या ₹40 (1 पीस)" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>फोटो का URL/लिंक (Image Link):</label>
+                <input type="url" id="pImg" placeholder="https://example.com/image.jpg" required>
+            </div>
+
+            <div class="form-group">
+                <label>विवरण (Description):</label>
+                <textarea id="pDesc" rows="2" placeholder="प्रोडक्ट की खासियत लिखें..." required></textarea>
+            </div>
+
+            <button type="submit" id="saveBtn" class="btn">प्रोडक्ट सेव करें</button>
+            <button type="button" id="cancelBtn" class="btn btn-cancel" onclick="resetForm()">रद्द करें (Cancel)</button>
+        </form>
     </div>
 
-    <!-- Review Section -->
+    <!-- PRODUCTS DISPLAY AREA -->
+    <h2>उपलब्ध प्रोडक्ट्स (Store Front)</h2>
+    <div class="product-grid" id="productGrid">
+        <!-- Javascript products render space -->
+    </div>
+
+    <!-- REVIEWS SECTION -->
     <div class="section-container">
-        <h2>प्रोडक्ट रिव्यू (Review)</h2>
+        <h2>⭐ ग्राहक रिव्यू (Customer Reviews)</h2>
         <form id="reviewForm">
-            <div class="form-group">
-                <label>आपका नाम:</label>
-                <input type="text" id="reviewName" required placeholder="अपना नाम लिखें">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>नाम:</label>
+                    <input type="text" id="reviewName" required placeholder="अपना नाम दर्ज करें">
+                </div>
+                <div class="form-group">
+                    <label>रेटिंग:</label>
+                    <select id="reviewRating">
+                        <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+                        <option value="4">⭐⭐⭐⭐ (4/5)</option>
+                        <option value="3">⭐⭐⭐ (3/5)</option>
+                        <option value="2">⭐⭐ (2/5)</option>
+                        <option value="1">⭐ (1/5)</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
-                <label>रेटिंग (Rating):</label>
-                <select id="reviewRating">
-                    <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
-                    <option value="4">⭐⭐⭐⭐ (4/5)</option>
-                    <option value="3">⭐⭐⭐ (3/5)</option>
-                    <option value="2">⭐⭐ (2/5)</option>
-                    <option value="1">⭐ (1/5)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>रिव्यू लिखें:</label>
-                <textarea id="reviewText" rows="3" required placeholder="प्रोडक्ट के बारे में अपनी राय दें"></textarea>
+                <label>समीक्षा (Review):</label>
+                <textarea id="reviewText" rows="2" required placeholder="अपनी राय लिखें"></textarea>
             </div>
             <button type="submit" class="btn">रिव्यू सबमिट करें</button>
         </form>
 
-        <div id="reviewList" style="margin-top: 20px;">
-            <h3>ग्राहक समीक्षाएं:</h3>
-            <!-- Reviews will show here -->
-        </div>
+        <div id="reviewList" style="margin-top: 20px;"></div>
     </div>
 
-    <!-- Comment Section -->
+    <!-- COMMENTS SECTION -->
     <div class="section-container">
-        <h2>कमेंट्स (Comments)</h2>
+        <h2>💬 सवाल और कमेंट्स (Comments)</h2>
         <form id="commentForm">
             <div class="form-group">
-                <label>आपका नाम:</label>
-                <input type="text" id="commentName" required placeholder="अपना नाम लिखें">
+                <label>नाम:</label>
+                <input type="text" id="commentName" required placeholder="आपका नाम">
             </div>
             <div class="form-group">
                 <label>कमेंट:</label>
-                <textarea id="commentText" rows="3" required placeholder="सवाल या विचार लिखें"></textarea>
+                <textarea id="commentText" rows="2" required placeholder="कोई प्रश्न या विचार लिखें"></textarea>
             </div>
-            <button type="submit" class="btn">कमेंट सबमिट करें</button>
+            <button type="submit" class="btn">कमेंट पोस्ट करें</button>
         </form>
 
-        <div id="commentList" style="margin-top: 20px;">
-            <h3>सभी कमेंट्स:</h3>
-            <!-- Comments will show here -->
-        </div>
+        <div id="commentList" style="margin-top: 20px;"></div>
     </div>
 
     <script>
-        // Initial Products List
-        let products = [
-            {
-                id: 1,
-                name: "गाय का देसी घी",
-                desc: "100% शुद्ध ए2 गाय का घी",
-                price: "₹1400 / लीटर",
-                image: "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?auto=format&fit=crop&w=500&q=80"
-            },
-            {
-                id: 2,
-                name: "भैंस का शुद्ध घी",
-                desc: "ताज़ा और गाढ़ा भैंस का घी",
-                price: "₹1200 / लीटर",
-                image: "https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=500&q=80"
-            },
-            {
-                id: 3,
-                name: "नीम हर्बल साबुन",
-                desc: "त्वचा की सुरक्षा और एंटी-बैक्टीरियल",
-                price: "₹40 (1 पीस) | ₹130 (4 का पैक)",
-                image: "https://images.unsplash.com/photo-1607006344380-b6775a0824a7?auto=format&fit=crop&w=500&q=80"
-            },
-            {
-                id: 4,
-                name: "एलोवेरा साबुन",
-                desc: "त्वचा को नमी और ठंडक देने वाला",
-                price: "₹40 (1 पीस) | ₹130 (4 का पैक)",
-                image: "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=500&q=80"
-            },
-            {
-                id: 5,
-                name: "संतरा (ऑरेंज) साबुन",
-                desc: "विटामिन C से भरपूर ताज़गी भरा साबुन",
-                price: "₹40 (1 पीस) | ₹130 (4 का पैक)",
-                image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80"
-            },
-            {
-                id: 6,
-                name: "गुलाब (रोज़) साबुन",
-                desc: "कोमल और सुगन्धित त्वचा के लिए",
-                price: "₹40 (1 पीस) | ₹130 (4 का पैक)",
-                image: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&w=500&q=80"
-            },
-            {
-                id: 7,
-                name: "चंदन साबुन",
-                desc: "प्राकृतिक निखार और ठंडक के लिए",
-                price: "₹40 (1 पीस) | ₹130 (4 का पैक)",
-                image: "https://images.unsplash.com/photo-1608248597260-15cb38d6139c?auto=format&fit=crop&w=500&q=80"
-            }
+        // Default Products Data
+        const defaultProducts = [
+            { id: 1, name: "गाय का देसी घी", price: "₹1400 / लीटर", desc: "100% शुद्ध ए2 गाय का घी", image: "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?w=500" },
+            { id: 2, name: "भैंस का शुद्ध घी", price: "₹1200 / लीटर", desc: "ताज़ा और गाढ़ा भैंस का घी", image: "https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=500" },
+            { id: 3, name: "नीम हर्बल साबुन", price: "₹40 (1 पीस) | ₹130 (4 पैक)", desc: "त्वचा सुरक्षा व एंटी-बैक्टीरियल", image: "https://images.unsplash.com/photo-1607006344380-b6775a0824a7?w=500" },
+            { id: 4, name: "एलोवेरा साबुन", price: "₹40 (1 पीस) | ₹130 (4 पैक)", desc: "त्वचा को ठंडक और नमी प्रदान करे", image: "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=500" },
+            { id: 5, name: "संतरा साबुन", price: "₹40 (1 पीस) | ₹130 (4 पैक)", desc: "विटामिन सी से भरपूर ताज़गी", image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500" }
         ];
 
-        // Function to render products on screen
+        // Load Products from LocalStorage or Default
+        let products = JSON.parse(localStorage.getItem('myProducts')) || defaultProducts;
+
+        // Display Products in Grid
         function displayProducts() {
             const grid = document.getElementById('productGrid');
             grid.innerHTML = '';
@@ -518,77 +300,120 @@ whatsapp(product,price);
                     <div class="product-card">
                         <div>
                             <img src="${product.image}" alt="${product.name}">
-                            <div class="product-title" id="title-${product.id}">${product.name}</div>
-                            <div class="product-desc" id="desc-${product.id}">${product.desc}</div>
-                            <div class="product-price" id="price-${product.id}">${product.price}</div>
+                            <div class="product-title">${product.name}</div>
+                            <div class="product-desc">${product.desc}</div>
+                            <div class="product-price">${product.price}</div>
                         </div>
-                        <div>
-                            <button class="btn btn-edit" onclick="editProduct(${product.id})">एडिट करें</button>
-                            <button class="btn">अभी खरीदें</button>
+                        <div class="card-actions">
+                            <button class="btn btn-edit-card" onclick="editProduct(${product.id})">✏️ एडिट</button>
+                            <button class="btn btn-delete-card" onclick="deleteProduct(${product.id})">🗑️ हटाएं</button>
                         </div>
                     </div>
                 `;
             });
+
+            // Save to browser memory
+            localStorage.setItem('myProducts', JSON.stringify(products));
         }
 
-        // Edit Option Logic
+        // Add / Update Product Submit Handler
+        document.getElementById('productForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const id = document.getElementById('productId').value;
+            const name = document.getElementById('pName').value;
+            const price = document.getElementById('pPrice').value;
+            const image = document.getElementById('pImg').value;
+            const desc = document.getElementById('pDesc').value;
+
+            if (id) {
+                // Edit Existing Product
+                const productIndex = products.findIndex(p => p.id == id);
+                products[productIndex] = { id: Number(id), name, price, image, desc };
+            } else {
+                // Add New Product
+                const newProduct = {
+                    id: Date.now(), // Generate Unique ID
+                    name,
+                    price,
+                    image,
+                    desc
+                };
+                products.push(newProduct);
+            }
+
+            displayProducts();
+            resetForm();
+        });
+
+        // Edit Product Function
         function editProduct(id) {
             const product = products.find(p => p.id === id);
             
-            const newName = prompt("नया नाम दर्ज करें:", product.name);
-            const newDesc = prompt("नया विवरण दर्ज करें:", product.desc);
-            const newPrice = prompt("नया रेट दर्ज करें:", product.price);
-            const newImg = prompt("नई फ़ोटो की URL दर्ज करें:", product.image);
+            document.getElementById('productId').value = product.id;
+            document.getElementById('pName').value = product.name;
+            document.getElementById('pPrice').value = product.price;
+            document.getElementById('pImg').value = product.image;
+            document.getElementById('pDesc').value = product.desc;
 
-            if (newName) product.name = newName;
-            if (newDesc) product.desc = newDesc;
-            if (newPrice) product.price = newPrice;
-            if (newImg) product.image = newImg;
-
-            displayProducts();
+            // Change Form Appearance
+            document.getElementById('formTitle').innerText = "✏️ प्रोडक्ट एडिट करें (Edit Product)";
+            document.getElementById('saveBtn').innerText = "अपडेट करें (Update)";
+            document.getElementById('cancelBtn').style.display = "inline-block";
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Review Form Logic
+        // Delete Product Function
+        function deleteProduct(id) {
+            if (confirm("क्या आप वाकई इस प्रोडक्ट को हटाना चाहते हैं?")) {
+                products = products.filter(p => p.id !== id);
+                displayProducts();
+            }
+        }
+
+        // Reset Form
+        function resetForm() {
+            document.getElementById('productId').value = '';
+            document.getElementById('productForm').reset();
+            document.getElementById('formTitle').innerText = "🛠️ नया प्रोडक्ट जोड़ें (Add New Product)";
+            document.getElementById('saveBtn').innerText = "प्रोडक्ट सेव करें";
+            document.getElementById('cancelBtn').style.display = "none";
+        }
+
+        // Handle Reviews
         document.getElementById('reviewForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('reviewName').value;
             const rating = document.getElementById('reviewRating').value;
             const text = document.getElementById('reviewText').value;
 
-            const reviewList = document.getElementById('reviewList');
-            const stars = '⭐'.repeat(rating);
-            
-            reviewList.innerHTML += `
+            document.getElementById('reviewList').innerHTML += `
                 <div class="review-item">
-                    <strong>${name}</strong> <span class="stars">${stars}</span>
+                    <strong>${name}</strong> <span class="stars">${'⭐'.repeat(rating)}</span>
                     <p>${text}</p>
                 </div>
             `;
-
             this.reset();
         });
 
-        // Comment Form Logic
+        // Handle Comments
         document.getElementById('commentForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('commentName').value;
             const text = document.getElementById('commentText').value;
 
-            const commentList = document.getElementById('commentList');
-            
-            commentList.innerHTML += `
+            document.getElementById('commentList').innerHTML += `
                 <div class="comment-item">
                     <strong>${name}</strong>
                     <p>${text}</p>
                 </div>
             `;
-
             this.reset();
         });
 
-        // Initialize Products
+        // Initialize display on page load
         displayProducts();
     </script>
-
 </body>
 </html>
